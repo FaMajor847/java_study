@@ -1,0 +1,10 @@
+services:
+  postgres-db:
+    image: postgres:16
+    container_name: java-pg
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_DB : usersdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
