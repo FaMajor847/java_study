@@ -1,0 +1,8 @@
+### GET PRODUCTS BY USER ID
+GET http://localhost:8080/api/products?userId=1
+
+### GET PRODUCT BY ID
+GET http://localhost:8080/api/products/1
+
+### GET PRODUCT BY ID
+GET http://localhost:8080/api/products/2
