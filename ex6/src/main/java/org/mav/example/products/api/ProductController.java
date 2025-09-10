@@ -1,8 +1,8 @@
-package org.mav.example.api;
+package org.mav.example.products.api;
 
-import org.mav.example.api.dto.ProductDto;
-import org.mav.example.api.mapper.ProductMapper;
-import org.mav.example.repo.ProductRepository;
+import org.mav.example.products.api.dto.ProductDto;
+import org.mav.example.products.api.mapper.ProductMapper;
+import org.mav.example.products.repository.ProductRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -33,6 +33,6 @@ public class ProductController {
     public ProductDto byId(@PathVariable Long id) {
         return products.findById(id)
                 .map(ProductMapper::toDto)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "product not found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found"));
     }
 }

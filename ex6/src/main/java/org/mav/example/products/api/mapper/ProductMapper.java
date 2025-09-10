@@ -1,7 +1,7 @@
-package org.mav.example.api.mapper;
+package org.mav.example.products.api.mapper;
 
-import org.mav.example.api.dto.ProductDto;
-import org.mav.example.domain.Product;
+import org.mav.example.products.api.dto.ProductDto;
+import org.mav.example.products.domain.Product;
 
 public final class ProductMapper {
     private ProductMapper() {}

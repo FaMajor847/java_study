@@ -1,4 +1,4 @@
-package org.mav.example.api.dto;
+package org.mav.example.products.api.dto;
 
 import java.math.BigDecimal;
 

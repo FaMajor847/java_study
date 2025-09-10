@@ -1,6 +1,6 @@
-package org.mav.example.repo;
+package org.mav.example.products.repository;
 
-import org.mav.example.domain.Product;
+import org.mav.example.products.domain.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

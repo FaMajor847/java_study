@@ -1,10 +1,10 @@
-package org.mav.example.bootstrap;
+package org.mav.example.products.bootstrap;
 
-import org.mav.example.domain.AccountType;
-import org.mav.example.domain.Note;
-import org.mav.example.domain.Product;
-import org.mav.example.domain.User;
-import org.mav.example.repo.UserRepository;
+import org.mav.example.products.domain.AccountType;
+import org.mav.example.products.domain.Note;
+import org.mav.example.products.domain.Product;
+import org.mav.example.products.domain.User;
+import org.mav.example.products.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

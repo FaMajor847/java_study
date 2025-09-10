@@ -1,4 +1,4 @@
-package org.mav.example.api;
+package org.mav.example.products.api;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;

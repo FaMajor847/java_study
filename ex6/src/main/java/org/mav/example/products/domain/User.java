@@ -1,4 +1,4 @@
-package org.mav.example.domain;
+package org.mav.example.products.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;

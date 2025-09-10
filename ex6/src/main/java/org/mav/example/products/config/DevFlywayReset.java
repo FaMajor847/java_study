@@ -1,4 +1,4 @@
-package org.mav.example.config;
+package org.mav.example.products.config;
 
 import org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy;
 import org.springframework.context.annotation.Bean;

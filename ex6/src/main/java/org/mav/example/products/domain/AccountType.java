@@ -1,4 +1,4 @@
-package org.mav.example.domain;
+package org.mav.example.products.domain;
 
 public enum AccountType {
     ACCOUNT("ACCOUNT"),

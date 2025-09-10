@@ -24,5 +24,11 @@ logging:
     org.hibernate.SQL: info
     org.hibernate.orm.jdbc.bind: info
 
+payments:
+  products-base-url: "http://localhost:${server.port}/api/products"   # куда ходим из payments
+  http:
+    connect-timeout-ms: 1000
+    read-timeout-ms: 2000
+
 server:
   port: 8080
