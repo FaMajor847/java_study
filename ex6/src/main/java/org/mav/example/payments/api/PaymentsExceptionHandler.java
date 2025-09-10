@@ -1,6 +1,8 @@
 package org.mav.example.payments.api;
 
 import jakarta.validation.ConstraintViolationException;
+import org.mav.example.limits.exception.LimitExceededException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -11,8 +13,7 @@ import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestControllerAdvice(basePackages = {
-        "org.mav.example.payments",
-        "org.mav.example.products"
+        "org.mav.example.payments"
 })
 public class PaymentsExceptionHandler {
 
@@ -71,4 +72,20 @@ public class PaymentsExceptionHandler {
         pd.setTitle("Payments internal error");
         return pd;
     }
+
+    @ExceptionHandler(LimitExceededException.class)
+    public ProblemDetail onLimitExceeded(LimitExceededException ex) {
+        var pd = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, ex.getMessage());
+        pd.setTitle("Limit exceeded");
+        return pd;
+    }
+
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ProblemDetail onIdempotencyConflict(DataIntegrityViolationException ex) {
+        var pd = ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, "Duplicate externalId");
+        pd.setTitle("Idempotency conflict");
+        return pd;
+    }
+
 }

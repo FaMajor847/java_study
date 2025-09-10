@@ -29,6 +29,15 @@ payments:
   http:
     connect-timeout-ms: 1000
     read-timeout-ms: 2000
+limits:
+  default-amount: 10000.00
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
 
 server:
   port: 8080

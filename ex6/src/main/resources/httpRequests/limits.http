@@ -1,0 +1,2 @@
+### GET PRODUCTS BY USER ID
+GET http://localhost:8080/limits/1/today

@@ -30,7 +30,8 @@ Content-Type: application/json
 {
   "userId": 1,
   "productId": 2,
-  "amount": 999999.99
+  "amount": 9998.99,
+  "externalId": "qqq2"
 }
 
 ### GET PAYMENT #1
